@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+.white-bg{
+  background-color: white;
+}
+
+
+.mapped{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1em;
+  justify-content: space-evenly;
+}
+
+.bottom-card{
+  display: flex;
+  justify-content: space-between;
+}
