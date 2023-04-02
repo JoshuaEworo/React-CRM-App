@@ -32,7 +32,89 @@ function App() {
   const handleChangeNum = (e) => setNumber(e.target.value);
 
   //Form Item Type
-  const [ type, setType ] = useState('');
+  const [items, setItems] = useState(() => {
+    const data = localStorage.getItem('data');
+    return data ? JSON.parse(data) : [
+        {
+            "name": "Joshua Eworo",
+            "address": "930 Cavern Brook Lane",
+            "number": "2812238764",
+            "type": "#Development",
+            "id": "9b1fb61698"
+        },
+        {
+            "name": "Emily Green",
+            "address": "2242 Meadowview Drive",
+            "number": "5551234567",
+            "type": "#Development",
+            "id": "a0b1c2d3e4"
+        },
+        {
+            "name": "Michael Johnson",
+            "address": "1376 Oakmound Road",
+            "number": "5559876543",
+            "type": "#Design",
+            "id": "b1c2d3e4f5"
+        },
+        {
+            "name": "Sarah Lee",
+            "address": "1846 Cherry Tree Lane",
+            "number": "5555551212",
+            "type": "#Non-specific",
+            "id": "c2d3e4f5g6"
+        },
+        {
+            "name": "David Chen",
+            "address": "1357 Elm Street",
+            "number": "5552223333",
+            "type": "#Development",
+            "id": "d3e4f5g6h7"
+        },
+        {
+            "name": "Jessica Brown",
+            "address": "2468 Redwood Drive",
+            "number": "5554445555",
+            "type": "#Design",
+            "id": "e4f5g6h7i8"
+        },
+        {
+            "name": "James Smith",
+            "address": "555 Blueberry Lane",
+            "number": "5557778888",
+            "type": "#Non-specific",
+            "id": "f5g6h7i8j9"
+        },
+        {
+            "name": "Ashley Garcia",
+            "address": "777 Cedar Street",
+            "number": "5559990000",
+            "type": "#Development",
+            "id": "g6h7i8j9k0"
+        },
+        {
+            "name": "Daniel Kim",
+            "address": "888 Oak Avenue",
+            "number": "5551112222",
+            "type": "#Design",
+            "id": "h7i8j9k0l1"
+        },
+        {
+            "name": "Rachel Nguyen",
+            "address": "999 Maple Road",
+            "number": "5553334444",
+            "type": "#Non-specific",
+            "id": "i8j9k0l1m2"
+        },
+        {
+            "name": "Kevin Patel",
+            "address": "111 Pine Street",
+            "number": "5556667777",
+            "type": "#Development",
+            "id": "j9k0l1m2n3"
+        }
+    ];
+});
+
 
   //Type Radio Functionality
   const typeRadios = ["Design", "Development", "Non-specific"];
