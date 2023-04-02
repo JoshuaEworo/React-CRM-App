@@ -24,13 +24,6 @@ function App() {
     const data = localStorage.getItem('data');
     return data ? JSON.parse(data) : [
         {
-            "name": "Joshua Eworo",
-            "address": "930 Cavern Brook Lane",
-            "number": "2812238764",
-            "type": "#Development",
-            "id": "9b1fb61698"
-        },
-        {
             "name": "Emily Green",
             "address": "2242 Meadowview Drive",
             "number": "5551234567",
