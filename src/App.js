@@ -20,18 +20,6 @@ function App() {
   const handleShow = () => setShow(true);
 
   //Array to be pushed to local storage
-  const [items,setItems] = useState([]);
-
-  ///////////////////// Modal Form Handler  /////////////////////
-  //Form Values
-  const [name, setName] = useState('');
-  const handleChangeName = (e) => setName(e.target.value);
-  const [address, setAddress] = useState('');
-  const handleChangeAddy = (e) => setAddress(e.target.value);
-  const [number, setNumber] = useState('');
-  const handleChangeNum = (e) => setNumber(e.target.value);
-
-  //Form Item Type
   const [items, setItems] = useState(() => {
     const data = localStorage.getItem('data');
     return data ? JSON.parse(data) : [
@@ -112,9 +100,21 @@ function App() {
             "type": "#Development",
             "id": "j9k0l1m2n3"
         }
-    ];
-});
+      ];
+  });
 
+
+  ///////////////////// Modal Form Handler  /////////////////////
+  //Form Values
+  const [name, setName] = useState('');
+  const handleChangeName = (e) => setName(e.target.value);
+  const [address, setAddress] = useState('');
+  const handleChangeAddy = (e) => setAddress(e.target.value);
+  const [number, setNumber] = useState('');
+  const handleChangeNum = (e) => setNumber(e.target.value);
+
+  //Form Item Type
+  const [ type, setType ] = useState('');
 
   //Type Radio Functionality
   const typeRadios = ["Design", "Development", "Non-specific"];
